@@ -73,8 +73,7 @@ def balance(bot, client):
         xmr_balance=xmr_balance,
         xmr_rub_balance=xmr_rub_balance,
 
-        usdt_balance=usdt_balance,
-        usdt_rub_balance=usdt_rub_balance
+        usdt_balance=usdt_balance
     )
     keyboard = keyboards.wallets_menu
 
