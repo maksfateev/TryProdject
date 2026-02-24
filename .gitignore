@@ -1,0 +1,15 @@
+.env
+db.sqlite3
+.DS_Store
+*.log*
+*.json
+media
+venv
+__pycache__
+*.pyc
+.idea
+*.xlsx
+*.rdb
+
+docker
+docker-compose.yml

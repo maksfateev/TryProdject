@@ -1,0 +1,84 @@
+{% extends "admin/change_form.html" %}
+
+{% block inline_field_sets %}
+<script>
+    function changeCardView(provider) {
+        let cardBank1Block = document.getElementsByClassName('field-card1_bank')[0];
+        let cardNumber1Block = document.getElementsByClassName('field-card1_number')[0];
+
+        let cardBank2Block = document.getElementsByClassName('field-card2_bank')[0];
+        let cardNumber2Block = document.getElementsByClassName('field-card2_number')[0];
+
+        let cardBank3Block = document.getElementsByClassName('field-card3_bank')[0];
+        let cardNumber3Block = document.getElementsByClassName('field-card3_number')[0];
+
+        if (provider === 'macrodroid') {
+            cardBank1Block.style.display = 'block';
+            cardNumber1Block.style.display = 'block';
+
+            cardBank2Block.style.display = 'block';
+            cardNumber2Block.style.display = 'block';
+
+            cardBank3Block.style.display = 'block';
+            cardNumber3Block.style.display = 'block';
+        }
+
+        else {
+            cardBank1Block.style.display = 'none';
+            cardNumber1Block.style.display = 'none';
+
+            cardBank2Block.style.display = 'none';
+            cardNumber2Block.style.display = 'none';
+
+            cardBank3Block.style.display = 'none';
+            cardNumber3Block.style.display = 'none';
+        }
+    }
+
+    function changeSbpView(provider) {
+        let sbpBank1Block = document.getElementsByClassName('field-sbp1_bank')[0];
+        let sbpNumber1Block = document.getElementsByClassName('field-sbp1_number')[0];
+
+        let sbpBank2Block = document.getElementsByClassName('field-sbp2_bank')[0];
+        let sbpNumber2Block = document.getElementsByClassName('field-sbp2_number')[0];
+
+        let sbpBank3Block = document.getElementsByClassName('field-sbp3_bank')[0];
+        let sbpNumber3Block = document.getElementsByClassName('field-sbp3_number')[0];
+
+        if (provider === 'macrodroid') {
+            sbpBank1Block.style.display = 'block';
+            sbpNumber1Block.style.display = 'block';
+
+            sbpBank2Block.style.display = 'block';
+            sbpNumber2Block.style.display = 'block';
+
+            sbpBank3Block.style.display = 'block';
+            sbpNumber3Block.style.display = 'block';
+        }
+
+        else {
+            sbpBank1Block.style.display = 'none';
+            sbpNumber1Block.style.display = 'none';
+
+            sbpBank2Block.style.display = 'none';
+            sbpNumber2Block.style.display = 'none';
+
+            sbpBank3Block.style.display = 'none';
+            sbpNumber3Block.style.display = 'none';
+        }
+    }
+
+    var cardSelect = document.getElementById('id_card_provider');
+    changeCardView(cardSelect.value);
+    cardSelect.addEventListener('change', function(event) {
+        changeCardView(event.target.value);
+    });
+
+    var sbpSelect = document.getElementById('id_sbp_provider');
+    changeSbpView(sbpSelect.value);
+    sbpSelect.addEventListener('change', function(event) {
+        changeSbpView(event.target.value);
+    });
+</script>
+{{ block.super }}
+{% endblock %}

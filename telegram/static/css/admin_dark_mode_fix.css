@@ -1,0 +1,31 @@
+.ck.ck-editor {
+    color: black !important;
+}
+.ck-editor{
+  width: 100% !important;
+}
+
+.ck-code_selected {
+    color: black !important;
+}
+
+code {
+    color: black !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    #log-entries td {
+        background-color: #1c1c1c !important;
+    }
+
+    .sorting_1 {
+        background-color: #2e2e2e !important;
+    }
+
+    label, .dataTables_info, #log-entries_info, #log-files-list_previous, #log-files-list_next, #log-entries_previous, #log-entries_next {
+        color: white !important;
+    }
+    .dataTables_empty {
+        background-color: #212121;
+    }
+}

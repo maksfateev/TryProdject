@@ -1,0 +1,25 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+{% block submit_buttons_bottom %}
+{{block.super}}
+{% if 'change' in request.path %}
+<div class="submit-row">
+    {% if status == 'ready' %}
+	<input type="submit" value="Проверить" name="_start-mailing-test">
+	<input type="submit" value="Отправить всем" name="_start-mailing-all">
+	<input type="submit" value="Отправить 0 обменов" name="_start-mailing-0">
+	<input type="submit" value="Отправить 1 обмен" name="_start-mailing-1">
+	<input type="submit" value="Отправить 1+ обмен" name="_start-mailing-1_plus">
+	<input type="submit" value="Отправить пидарасам" name="_start-mailing-pidors">
+    <input type="submit" value="Ночная группа" name="_start-mailing-night">
+    <input type="submit" value="Утренняя группа" name="_start-mailing-morning">
+    <input type="submit" value="Дневная группа" name="_start-mailing-day">
+    <input type="submit" value="Вечерняя группа" name="_start-mailing-evening">
+    {% elif status == 'progress' %}
+        <input type="submit" value="Остановить" name="_stop-mailing" style="background-color: red; color: white">
+    {% elif status == 'scheduled' %}
+        <input type="submit" value="Отменить" name="_close-mailing" style="background-color: red; color: white">
+    {% endif %}
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,13 @@
+django==5.0.8
+pillow
+pyTelegramBotAPI
+python-dotenv
+gunicorn
+psycopg2-binary
+Jinja2
+django-ckeditor-5
+django-redis
+django-rq
+westwallet-api
+captcha
+openpyxl
