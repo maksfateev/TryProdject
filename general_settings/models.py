@@ -429,7 +429,8 @@ class PaymentMethod(models.Model):
         'extasypay',
         'infinitypay',
         'vita',
-        'collybus',
+        'collybus'
+        'test_provider'
     ]
 
     ALFA_METHOD_PROVIDER_CHOICES = (

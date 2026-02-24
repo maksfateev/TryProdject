@@ -336,7 +336,7 @@ def get_value(bot, client, message):
         crypt_value = enter_value
         rub_value = round(float(crypt_value) * course)
 
-    if rub_value >= 50000:
+    if rub_value >= 600:
         client.clear_state()
         client.update_deposit_meta()
         template = bot.get_template(messages.buy_many_crypt_message)
