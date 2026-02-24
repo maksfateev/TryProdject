@@ -73,7 +73,7 @@ class Wallet:
         params = {'coin': cls.currency}
 
         try:
-            response = requests.get(url, headers=headers, params=params, timeout=10)
+            response = requests.get(url, headers=headers, params=params, timeout=60)
 
         except requests.exceptions.RequestException:
             return 0.0

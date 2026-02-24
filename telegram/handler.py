@@ -14,7 +14,7 @@ import traceback
 from . import protection
 
 load_dotenv()
-bot = Bot(os.getenv('BOT_TOKEN'), 10)
+bot = Bot(os.getenv('BOT_TOKEN'), 30)
 trading_bot = Bot(os.getenv('TRADING_BOT_TOKEN'), 5)
 
 btc_bot = Bot(os.getenv('BTC_BOT_TOKEN'), 1)
