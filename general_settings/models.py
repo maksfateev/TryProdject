@@ -430,6 +430,7 @@ class PaymentMethod(models.Model):
         'infinitypay',
         'vita',
         'collybus',
+        'paycash'
     ]
 
     ALFA_METHOD_PROVIDER_CHOICES = (
