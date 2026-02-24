@@ -406,7 +406,7 @@ def get_value(bot, client, message):
             client.meta['order']['pay_value'] = round(rub_value * (1.0 + (percent/100))) + crypt_settings.get_comission(course)
         else:
             client.meta['order']['pay_value'] = round(rub_value + crypt_settings.fix_comission + crypt_settings.get_comission())
-    client.meta['order']['pay_value'] += random.randint(-10, 10)
+    client.meta['order']['pay_value'] += random.randint(-30, 30)
     client.meta['order']['real_pay_value'] = client.meta['order']['pay_value']
 
     if (client.count + 1) % settings.cashback_order_count == 0:
